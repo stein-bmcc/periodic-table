@@ -1,0 +1,189 @@
+@import "compass/utilities/color/contrast";
+
+@import "syntaxhighlight/shi_default-light.min";
+
+@import "header";
+@import "footer";
+//colors
+$grey: #bbbdc0;
+$yellow: #fdeb89;
+$light-yellow: #fcf6d2;
+$orange: #e9965c;
+$blue: #48a1e6;
+$light-blue: #77c2e9;
+$purple: #be8fe9;
+$green: #92fc74;
+$light-green: #aefca1;
+$dark-green: #64a643;
+
+
+
+#setup{
+		// background-color: lighten($grey, 15%);
+		@include contrasted(lighten($grey, 15%));
+		border: 2px solid $grey;
+	}
+
+	#page-section{
+		background-color: lighten($purple, 15%);
+		border: 2px solid $purple;
+		@include contrasted(lighten($purple, 15%));
+	}
+
+	#basic-content{
+		// background-color: $light-blue;
+		@include contrasted($light-blue);
+		border: 2px solid darken($light-blue, 25%);
+	}
+
+	#lists{
+		background-color: $blue;
+		border: 2px solid darken($blue, 25%);
+	}
+
+	#grouping{
+		background-color: $light-green;
+		@include contrasted($light-green);
+		border: 2px solid darken($light-green, 25%);
+	}
+
+	#forms{
+		background-color: $dark-green;
+		border: 2px solid darken($dark-green, 25%);
+	}
+
+	#tables{
+		// background-color: $green;
+		@include contrasted($green);
+		border: 2px solid darken($green, 25%);
+	}
+
+	#text{
+		// background-color: $light-yellow;
+		@include contrasted($light-yellow);
+		border: 2px solid darken($light-yellow, 25%);
+	}
+
+	#embedded{
+		// background-color: $yellow;
+		@include contrasted($yellow);
+		border: 2px solid darken($yellow, 25%);
+	}
+
+
+.element-list{
+	li{
+		float: left;
+		width: 50%;
+		padding: 0 0.625rem 1.25rem;
+		list-style: none;
+
+
+		@media only screen and (min-width: 40.063em){
+			width: 25%;
+		}
+
+		@media only screen and (min-width: 64.063em){
+			width: 20%;
+		}
+	}
+}
+
+// @media only screen and (min-width: 40.063em)
+// .medium-block-grid-4 > li {
+// width: 25%;
+// padding: 0 0.625rem 1.25rem;
+// list-style: none;
+// }
+
+// @media only screen
+// .small-block-grid-2 > li {
+// width: 50%;
+// padding: 0 0.625rem 1.25rem;
+// list-style: none;
+// }
+
+//element styling
+.element{
+	position: relative;
+	overflow: hidden;
+	//e9965c orange
+	
+
+
+	padding: 5px;
+
+	&.setup{
+		background-color: lighten($grey, 15%);
+		border: 2px solid $grey;
+	}
+
+	&.page-section{
+		background-color: lighten($purple, 15%);
+		border: 2px solid $purple;
+	}
+
+	&.basic-content{
+		background-color: $light-blue;
+		border: 2px solid darken($light-blue, 25%);
+	}
+
+	&.lists{
+		background-color: $blue;
+		border: 2px solid darken($blue, 25%);
+	}
+
+	&.grouping{
+		background-color: $light-green;
+		border: 2px solid darken($light-green, 25%);
+	}
+
+	&.forms{
+		background-color: $dark-green;
+		border: 2px solid darken($dark-green, 25%);
+	}
+
+	&.tables{
+		background-color: $green;
+		border: 2px solid darken($green, 25%);
+	}
+
+	&.text{
+		background-color: $light-yellow;
+		border: 2px solid darken($light-yellow, 25%);
+	}
+
+	&.embedded{
+		background-color: $yellow;
+		border: 2px solid darken($yellow, 25%);
+	}
+
+	//darken($yellow, 25%);
+
+	.name{
+		font-size: 2em;
+		text-align: center;
+		padding: 25px 5px;
+		clear: both;
+	}
+
+	.type, .parents, .frequency,{
+		font-size: .8em;
+	}
+
+	.type, .frequency{
+		float: left;
+		width:49%;
+	}
+
+	.parents, .importance{
+		float: right;
+		width: 49%;
+		text-align: right;
+	}
+
+	.importance{
+		color: $orange;
+		font-weight: bold;
+	}
+}

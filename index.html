@@ -1,0 +1,868 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <header>
+      
+    </header>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>HTML5 Periodic Table of Elements</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+      	<div class="panel">
+	       
+	        <p>This is an opinionated look at HTML5 elements. The goal is to help you choose an element to use when marking up content.</p>
+
+      	</div>
+      </div>
+    </div>
+    <!-- end row  -->
+
+    <div class="row">
+      <!-- li>div.element>div.type+div.parents+div.name+div.frequency+div.importance -->
+
+      <a href="#" id="all" class="small round button">All Elements</a>
+      <a href="#" id="core" class="small round button">
+        <span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!">extended information</span>Core Elements
+        </a>
+      <a href="#" id="content" class="small round button">Content Elements</a>
+      <a href="#" id="setup" class="small round button">setup Elements</a>
+      <a href="#" id="page-section" class="small round button">page-section Elements</a>
+      <a href="#" id="basic-content" class="small round button">basic-content Elements</a>
+      <a href="#" id="lists" class="small round button">lists Elements</a>
+      <a href="#" id="grouping" class="small round button">grouping Elements</a>
+      <a href="#" id="forms" class="small round button">forms Elements</a>
+      <a href="#" id="tables" class="small round button">tables Elements</a>
+      <a href="#" id="text" class="small round button">text Elements</a>
+      <a href="#" id="embedded" class="small round button">embedded Elements</a><br/>
+  
+      <!-- <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-5" id="elements"> -->
+      <ul class="element-list" id="elements">
+        <li>
+          <div class="element setup core">
+            <div class="type">not content</div>
+            <div class="parents">no parent</div>
+            <div class="name"><a href="#" data-reveal-id="doctype">doctype</a></div>
+            <div class="frequency">common</div>
+            <div class="importance">1*</div>
+          </div>
+
+          <!-- <a href="#" data-reveal-id="myModal">Click Me For A Modal</a> -->
+
+          <div id="doctype" class="reveal-modal" data-reveal>
+            <h2>doctype</h2>
+            <p class="lead">The doctype is the first element at the top of the page. It tells the browser what version of HTML you are using.</p>
+
+            <h3>Example:</h3>
+            <p>HTML5 doctype</p>
+           <div class="snippet-container"><div class="sh_default-light snippet-wrap"><div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div><pre class="shi_pre sh_html snippet-formatted sh_sourceCode" data-initialized="true" data-gclp-id="8"><ol class="snippet-num"><li>&lt;!doctype html&gt;</li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display: none;" tabindex="0" contenteditable="" data-initialized="true" data-gclp-id="9">&lt;!doctype html&gt;</pre></div></div>
+
+            <!-- <script src="https://gist.github.com/profstein/b0e0e78853aa55173dda.js"></script> -->
+
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+        </li>
+        <li>
+          <div class="element setup core">
+            <div class="type">not content</div>
+            <div class="parents">no parent</div>
+            <div class="name">html</div>
+            <div class="frequency">common</div>
+            <div class="importance">1*</div>
+          </div>
+        </li>
+        <li>
+          <div class="element setup core">
+            <div class="type">not content</div>
+            <div class="parents">html</div>
+            <div class="name">    <a href="#" data-reveal-id="head">head</a></div>
+            <div class="frequency">common</div>
+            <div class="importance">1*</div>
+          </div>
+
+          <!-- begin .reveal-modal -->
+          <div id="head" class="reveal-modal" data-reveal>
+            <h2>head</h2>
+            <p class="lead">The head element represents a collection of metadata for the Document. This is for the browser not people and provides information like: title of the site, charset being used, links to <abbr title="Cascading Style Sheets">CSS</abbr> stylesheets, and information that helps responsive design. Not to be confused with the <b>header</b> element.</p>
+          
+            <h3>Example:</h3>
+            <p>Basic reponsive header</p>
+            <div class="example">
+              <div class="snippet-container"><div class="sh_default-light snippet-wrap"><div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div><pre class="shi_pre sh_html snippet-formatted sh_sourceCode" data-initialized="true" data-gclp-id="4"><ol class="snippet-num"><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>    <span class="sh_keyword">&lt;head&gt;</span></li><li>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">charset</span><span class="sh_symbol">=</span><span class="sh_string">"utf-8"</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">http-equiv</span><span class="sh_symbol">=</span><span class="sh_string">"X-UA-Compatible"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">"IE=edge"</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;title&gt;</span>The Title of Your Website: Page Title<span class="sh_keyword">&lt;/title&gt;</span></li><li>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">name</span><span class="sh_symbol">=</span><span class="sh_string">"description"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">""</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">name</span><span class="sh_symbol">=</span><span class="sh_string">"viewport"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">"width=device-width, initial-scale=1"</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;link</span> <span class="sh_type">rel</span><span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_type">href</span><span class="sh_symbol">=</span><span class="sh_string">"css/main.css"</span><span class="sh_keyword">&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>    <span class="sh_keyword">&lt;/head&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display: none;" tabindex="0" contenteditable="" data-initialized="true" data-gclp-id="5">    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;title&gt;The Title of Your Website: Page Title&lt;/title&gt;
+        &lt;meta name="description" content=""&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;link rel="stylesheet" href="css/main.css"&gt;
+    &lt;/head&gt;</pre></div></div>
+            </div>
+          
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+        </li>
+        <li>
+          <div class="element setup core">
+            <div class="type">not content</div>
+            <div class="parents">head</div>
+            <div class="name">    <a href="#" data-reveal-id="meta">meta</a></div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        
+          <!-- begin .reveal-modal -->
+          <div id="meta" class="reveal-modal" data-reveal>
+            <h2>meta</h2>
+            <p class="lead">The meta element represents various kinds of metadata that cannot be expressed using the title, base, link, style, and script elements.</p>
+
+            <p>The meta element can represent document-level metadata with the name attribute, pragma directives with the http-equiv attribute, and the file's character encoding declaration when an HTML document is serialized to string form (e.g. for transmission over the network or for disk storage) with the charset attribute.</p>
+
+            <p>Meta tags are useful in <abbr title="Search Engine Optimization">SEO</abbr> for helping search engine spiders index your page properly. See <a href="https://support.google.com/webmasters/answer/79812?hl=en">more from Google here</a>.</p>
+          
+            <h3>Example:</h3>
+            <p>This shows a number of meta tags used: meta tag defines the charset used. utf-8 works for most languages.</p>
+            <ul>
+              <li><b>charset</b>: this defines the character set used. Important for languages other than English. UTF-8 works for most languages so is a good default.</li>
+              <li><b>http-equiv</b>: this is for IE and allows you to which mode IE will render in. Edge tells IE to use the whatever version it is and not something earlier (so IE 10 will render as IE10 and not something earlier). <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e">see longer explanation</a> and <a href="https://www.modern.ie/en-us/performance/how-to-use-x-ua-compatible">MS explanation</a></li>
+              <li><b>name</b>: the <code>name=description</code> is used by search engines like Google to read a short description of the page. <a href="https://support.google.com/webmasters/answer/79812?hl=en">see more from Google</a></li>
+              <li><b>name</b>: the <code>name=viewport</code> tag is a key part of responsive design and helps ensure mobile browsers will render the page as you expect (and not shrink it down).</li>
+            </ul>
+            <div class="example">
+              <div class="snippet-container"><div class="sh_default-light snippet-wrap"><div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div><pre class="shi_pre sh_html snippet-formatted sh_sourceCode" data-initialized="true" data-gclp-id="24"><ol class="snippet-num"><li>    <span class="sh_keyword">&lt;head&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">charset</span><span class="sh_symbol">=</span><span class="sh_string">"utf-8"</span><span class="sh_keyword">&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">http-equiv</span><span class="sh_symbol">=</span><span class="sh_string">"X-UA-Compatible"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">"IE=edge"</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;title&gt;</span>The Title of Your Website: Page Title<span class="sh_keyword">&lt;/title&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">name</span><span class="sh_symbol">=</span><span class="sh_string">"description"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">""</span><span class="sh_keyword">&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">name</span><span class="sh_symbol">=</span><span class="sh_string">"viewport"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">"width=device-width, initial-scale=1"</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;link</span> <span class="sh_type">rel</span><span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_type">href</span><span class="sh_symbol">=</span><span class="sh_string">"css/main.css"</span><span class="sh_keyword">&gt;</span></li><li>    <span class="sh_keyword">&lt;/head&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display: none;" tabindex="0" contenteditable="" data-initialized="true" data-gclp-id="25">    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;title&gt;The Title of Your Website: Page Title&lt;/title&gt;
+        &lt;meta name="description" content=""&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;link rel="stylesheet" href="css/main.css"&gt;
+    &lt;/head&gt;</pre></div></div>
+            </div> <!-- end .example -->
+            
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal <--></-->
+
+
+        </li>
+        <li>
+          <div class="element setup core">
+            <div class="type">not content</div>
+            <div class="parents">head</div>
+            <div class="name">    <a href="#" data-reveal-id="link">link</a></div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+          
+          <!-- begin .reveal-modal -->
+          <div id="link" class="reveal-modal" data-reveal>
+            <h2>link</h2>
+            <p class="lead">The link element allows authors to link their document to other resources.</p>
+
+<p>The destination of the link(s) is given by the href attribute, which must be present and must contain a valid non-empty URL potentially surrounded by spaces. If the href attribute is absent, then the element does not define a link.</p>
+<p>A link element must have rel attribute.</p>
+          
+            <h3>Example:</h3>
+            <p>The link here tells the browser to look in the <b>css</b> folder for a file named <b>main.css</b>.</p>
+            <div class="example">
+              <div class="snippet-container"><div class="sh_default-light snippet-wrap"><div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div><pre class="shi_pre sh_html snippet-formatted sh_sourceCode" data-initialized="true" data-gclp-id="4"><ol class="snippet-num"><li>    <span class="sh_keyword">&lt;head&gt;</span></li><li>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">charset</span><span class="sh_symbol">=</span><span class="sh_string">"utf-8"</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">http-equiv</span><span class="sh_symbol">=</span><span class="sh_string">"X-UA-Compatible"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">"IE=edge"</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;title&gt;</span>The Title of Your Website: Page Title<span class="sh_keyword">&lt;/title&gt;</span></li><li>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">name</span><span class="sh_symbol">=</span><span class="sh_string">"description"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">""</span><span class="sh_keyword">&gt;</span></li><li>        <span class="sh_keyword">&lt;meta</span> <span class="sh_type">name</span><span class="sh_symbol">=</span><span class="sh_string">"viewport"</span> <span class="sh_type">content</span><span class="sh_symbol">=</span><span class="sh_string">"width=device-width, initial-scale=1"</span><span class="sh_keyword">&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>        <span class="sh_keyword">&lt;link</span> <span class="sh_type">rel</span><span class="sh_symbol">=</span><span class="sh_string">"stylesheet"</span> <span class="sh_type">href</span><span class="sh_symbol">=</span><span class="sh_string">"css/main.css"</span><span class="sh_keyword">&gt;</span></li><li>    <span class="sh_keyword">&lt;/head&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display: none;" tabindex="0" contenteditable="" data-initialized="true" data-gclp-id="5">    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;title&gt;The Title of Your Website: Page Title&lt;/title&gt;
+        &lt;meta name="description" content=""&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;link rel="stylesheet" href="css/main.css"&gt;
+    &lt;/head&gt;</pre></div></div>
+            </div> <!-- end .example -->
+          
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+
+        </li>
+        <li>
+          <div class="element setup core">
+            <div class="type">not content</div>
+            <div class="parents">head</div>
+            <div class="name">    <a href="#" data-reveal-id="style">style</a></div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+
+          <!-- begin .reveal-modal -->
+          <div id="style" class="reveal-modal" data-reveal>
+            <h2>style</h2>
+            <p class="lead">This allows you to write CSS directly on the page. </p>
+          
+            <h3>Example:</h3>
+            <p>Genearlly you should not be doing this but instead putting your CSS in an external .css file. So no example is given.</p>
+            
+          
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+
+        </li>
+        <li>
+          <div class="element setup">
+            <div class="type">not content</div>
+            <div class="parents">head or body</div>
+            <div class="name">script</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element setup core">
+            <div class="type">not content</div>
+            <div class="parents">html</div>
+            <div class="name">body</div>
+            <div class="frequency">common</div>
+            <div class="importance">1*</div>
+          </div>
+        </li>
+
+        <!-- Page block -->
+        <li>
+          <div class="element content page-section core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">    <a href="#" data-reveal-id="div">div</a></div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+
+          <!-- begin .reveal-modal -->
+          <div id="div" class="reveal-modal" data-reveal>
+            <h2>div</h2>
+            
+            <p class="lead">A div is a generic element used to group elements together. Use it when one of the other grouping elements (article, section, aside, nav etc) are not appropriate.</p>
+            <p>Because the div has no meaning by itself, you should <b>always (almost)</b> use it with one or more classes. Otherwise it is hard to use CSS to select the div and hard to know what it is grouping.</p>
+            <p>One of class names should describe the content in the div. You can kind of think of div as a way to add your own custom elements to the page.</p>
+          
+            <h3>Example:</h3>
+            <p>In this case the developer needed to create a page with a number of speakers. Two divs are used to mark a group of elements as belonging to a speaker (div class=speaker) and the image of the speaker (div class=pic).</p>
+            <div class="example">
+              <div class="snippet-container"><div class="sh_default-light snippet-wrap"><div class="snippet-menu sh_sourceCode"><a class="snippet-window sh_url" href="#">pop-up</a><a class="snippet-text sh_url" href="#">text</a></div><pre class="shi_pre sh_html snippet-formatted sh_sourceCode" data-initialized="true" data-gclp-id="10"><ol class="snippet-num"><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span> <span class="sh_keyword">&lt;div</span> <span class="sh_type">class</span><span class="sh_symbol">=</span><span class="sh_string">"speaker"</span><span class="sh_keyword">&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>     <span class="sh_keyword">&lt;div</span> <span class="sh_type">class</span><span class="sh_symbol">=</span><span class="sh_string">"pic"</span><span class="sh_keyword">&gt;</span></li><li>         <span class="sh_keyword">&lt;img</span> <span class="sh_type">src</span><span class="sh_symbol">=</span><span class="sh_string">"http://placehold.it/100x100"</span> <span class="sh_type">alt</span><span class="sh_symbol">=</span><span class="sh_string">"picture of speaker"</span><span class="sh_keyword">&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span>     <span class="sh_keyword">&lt;/div&gt;</span> <span class="sh_comment">&lt;!-- end .pic --&gt;</span></li><li>     <span class="sh_keyword">&lt;h3&gt;</span>Name of Speaker<span class="sh_keyword">&lt;/h3&gt;</span></li><li>     <span class="sh_keyword">&lt;p&gt;</span>Bio of Speaker<span class="sh_keyword">&lt;/p&gt;</span></li><li class="box" style="margin-left: -3.3em;"><span class="box-sp" style="width: 21px;">&nbsp;</span> <span class="sh_keyword">&lt;/div&gt;</span><span class="sh_comment">&lt;!-- end .speaker --&gt;</span></li></ol></pre><pre class="snippet-textonly sh_sourceCode" style="display: none;" tabindex="0" contenteditable="" data-initialized="true" data-gclp-id="11"> &lt;div class="speaker"&gt;
+     &lt;div class="pic"&gt;
+         &lt;img src="http://placehold.it/100x100" alt="picture of speaker"&gt;
+     &lt;/div&gt; &lt;!-- end .pic --&gt;
+     &lt;h3&gt;Name of Speaker&lt;/h3&gt;
+     &lt;p&gt;Bio of Speaker&lt;/p&gt;
+ &lt;/div&gt;&lt;!-- end .speaker --&gt;</pre></div></div>
+
+            </div> <!-- end .example -->
+          
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+        </li>
+        <li>
+          <div class="element content page-section core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">header</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content page-section core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">footer</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content page-section core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">nav</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content page-section">
+            <div class="type">structure</div>
+            <div class="parents">body</div>
+            <div class="name">main</div>
+            <div class="frequency">less used</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content page-section core">
+            <div class="type">structure</div>
+            <div class="parents">body</div>
+            <div class="name">article</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content page-section core">
+            <div class="type">structure</div>
+            <div class="parents">body</div>
+            <div class="name">section</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content page-section">
+            <div class="type">structure</div>
+            <div class="parents">body</div>
+            <div class="name">aside</div>
+            <div class="frequency">less used</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content page-section">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">address</div>
+            <div class="frequency">uncommon</div>
+            <div class="importance">3</div>
+          </div>
+        </li>
+
+
+        <li>
+          <div class="element content basic-content core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">h1</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content basic-content core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">h2</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content basic-content core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">h3</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content basic-content core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">h4</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content basic-content core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">h5</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content basic-content core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">h6</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content basic-content core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">p</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+
+
+
+        <!-- Text -->
+        <li>
+          <div class="element content text core">
+            <div class="type">block</div>
+            <div class="parents">any block</div>
+            <div class="name">span</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content text core">
+            <div class="type">block</div>
+            <div class="parents">any block</div>
+            <div class="name">a</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content text core">
+            <div class="type">block</div>
+            <div class="parents">any block</div>
+            <div class="name">strong</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content text core">
+            <div class="type">block</div>
+            <div class="parents">any block</div>
+            <div class="name">b</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content text core">
+            <div class="type">block</div>
+            <div class="parents">any block</div>
+            <div class="name">em</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content text core">
+            <div class="type">block</div>
+            <div class="parents">any block</div>
+            <div class="name">i</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content text core">
+            <div class="type">block</div>
+            <div class="parents">any block</div>
+            <div class="name">br</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+
+
+
+        <!-- Lists -->
+        <li>
+          <div class="element content lists core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">ol</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content lists core">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">ul</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content lists core">
+            <div class="type">block</div>
+            <div class="parents">ol , ul</div>
+            <div class="name">li</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content lists">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">dl</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content lists">
+            <div class="type">block</div>
+            <div class="parents">dl</div>
+            <div class="name">dt</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content lists">
+            <div class="type">block</div>
+            <div class="parents">dl</div>
+            <div class="name">dd</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+
+        <!-- Grouping -->
+        <li>
+          <div class="element content grouping">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">blockquote</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content grouping">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">pre</div>
+            <div class="frequency">less common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content grouping">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">figure</div>
+            <div class="frequency">less common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+
+        <li>
+          <div class="element content grouping">
+            <div class="type">block</div>
+            <div class="parents">figure</div>
+            <div class="name">figcaption</div>
+            <div class="frequency">less common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+
+
+        <!-- Tables -->
+        <li>
+          <div class="element content tables">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">table</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content tables">
+            <div class="type">block</div>
+            <div class="parents">table</div>
+            <div class="name">tr</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content tables">
+            <div class="type">block</div>
+            <div class="parents">tr</div>
+            <div class="name">td</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content tables">
+            <div class="type">block</div>
+            <div class="parents">tr</div>
+            <div class="name">th</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+
+
+
+
+        <!-- Embeds -->
+
+
+        <li>
+          <div class="element content embedded">
+            <div class="type">embed</div>
+            <div class="parents">block</div>
+            <div class="name">img</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content embedded">
+            <div class="type">embed</div>
+            <div class="parents">block</div>
+            <div class="name">video</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content embedded">
+            <div class="type">embed</div>
+            <div class="parents">block</div>
+            <div class="name">audio</div>
+            <div class="frequency">common</div>
+            <div class="importance">2</div>
+          </div>
+        </li>
+
+        <!-- Forms -->
+
+        <li>
+          <div class="element content forms">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name">form</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content forms">
+            <div class="type">block</div>
+            <div class="parents">form</div>
+            <div class="name">input</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content forms">
+            <div class="type">block</div>
+            <div class="parents">form</div>
+            <div class="name">label</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content forms">
+            <div class="type">block</div>
+            <div class="parents">form</div>
+            <div class="name">button</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content forms">
+            <div class="type">block</div>
+            <div class="parents">form</div>
+            <div class="name">select</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content forms">
+            <div class="type">block</div>
+            <div class="parents">select</div>
+            <div class="name">option</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+        <li>
+          <div class="element content forms">
+            <div class="type">block</div>
+            <div class="parents">form</div>
+            <div class="name">textarea</div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+
+    <footer>
+      <div class="row">
+        <p>Many of the descriptions of the elements were taken from <a href="http://html5doctor.com/element-index">HTML5 Doctor Element Index</a> which is licensed under a Creative Commons Attribution Non-Commercial 2.0 license.</p>
+        <p>
+          All original and modified content for this page released under the following license:
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">HTML5 Periodic Table of Elements</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://teachingmultimedia.com" property="cc:attributionName" rel="cc:attributionURL">Christopher Stein</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+        </p>
+
+        <p>The HTML, CSS and some of the JavaScript interactions were based on Zurb's <a href="http://foundation.zurb.com/">Foundation 5 framework</a>.</p>
+      </div>
+    </footer>
+
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/shi_jquery.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+
+      //multiple classes $( "div, span, p.myClass" ).
+      //$( "li" ).not( ":even" )
+
+      //this function gets parameter of what to look for and also uses if statement to now reshow something already visible or hidden
+      function filterElements(className){
+        $('#elements li .element').each(function(){
+          //check to see if has the class we're looking for
+          if($(this).hasClass(className)){
+            //now show if it is not visible
+            if($(this).parent().is(':visible')==false){
+              //show
+              $(this).parent().slideDown('400', function() {
+
+              });
+              // $(this).show("scale",{percent:100},500,callback);
+            }
+          }else{
+            //doesn't have the class so hide if it is visible
+            if($(this).parent().is(':visible')){
+              //hide
+              $(this).parent().slideUp(400);
+              // $(this).parent().hide();
+              // $(this).hide("scale",{percent:0},500);
+            }
+          }
+        });//end each
+      }//end filterElements
+
+
+      function filterMultipleElements(classes){
+        $('#elements li').each(function(){
+          var isFiltered = false;
+          for (var i in classes) {
+              if ($(this).hasClass(classes[i]))
+                  isFiltered = true;
+          }
+          //check to see if has the class we're looking for
+          if(isFiltered){
+            //now show if it is not visible
+            if($(this).is(':visible')==false){
+              //show
+              $(this).slideDown('400', function() {
+
+              });
+              // $(this).show("scale",{percent:100},500,callback);
+            }
+          }else{
+            //doesn't have the class so hide if it is visible
+            if($(this).is(':visible')){
+              //hide
+              $(this).slideUp(400);
+              // $(this).hide("scale",{percent:0},500,callback);
+            }
+          }
+        });//end each
+      }//end filterMultipleElements
+
+      function showAll () {
+        console.log('showing all');
+        $('#elements li').each(function(index){
+            //$(this).fadeIn();
+            //$(this).show("scale",{percent:100},500,callback);
+          if($(this).is(':visible')){
+              //nothing for now
+            }else{
+              $(this).slideDown(400);
+            }
+        });//end each
+      }
+
+      $("#all").click(function(e){
+        e.preventDefault();
+        showAll();
+      });
+      $("#core").click(function(e){
+        e.preventDefault();
+        filterElements("core");console.log('filter core');
+
+
+        // selectFilter("groups");
+        // $('#my-activity p').text("what's happening with your groups");
+        // $(".side-nav li a").removeClass('selected');
+        // $(this).addClass('selected');
+        // hideCards();
+        // $("#active-groups").show();
+      });
+
+      $("#content").click(function(e){
+        e.preventDefault();
+        filterElements("content");console.log('filter content');
+      });
+      $("#setup").click(function(e){
+        e.preventDefault();
+        filterElements("setup");console.log('filter setup');
+      });
+      $("#page-section").click(function(e){
+        e.preventDefault();
+        filterElements("page-section");console.log('filter page-section');
+      });
+      $("#basic-content").click(function(e){
+        e.preventDefault();
+        filterElements("basic-content");console.log('filter basic-content');
+      });
+      $("#lists").click(function(e){
+        e.preventDefault();
+        filterElements("lists");console.log('filter lists');
+      });
+      $("#grouping").click(function(e){
+        e.preventDefault();
+        filterElements("grouping");console.log('filter grouping');
+      });
+      $("#forms").click(function(e){
+        e.preventDefault();
+        filterElements("forms");console.log('filter forms');
+      });
+      $("#tables").click(function(e){
+        e.preventDefault();
+        filterElements("tables");console.log('filter tables');
+      });
+      $("#text").click(function(e){
+        e.preventDefault();
+        filterElements("text");console.log('filter text');
+      });
+      $("#embedded").click(function(e){
+        e.preventDefault();
+        filterElements("embedded");console.log('filter embedded');
+      });
+
+
+    </script>
+  </body>
+</html>
