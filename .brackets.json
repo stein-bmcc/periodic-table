@@ -1,0 +1,19 @@
+{
+    "path": {
+        "sass/style.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "imagePath": null,
+                "sourceComments": "map",
+                "outputStyle": "nested"
+            },
+            "linting.collapsed": false,
+            "brackets-git.gitPath": "git"
+        },
+        "sass/*.scss": {
+            "sass.enabled": false,
+            "linting.collapsed": false
+        }
+    }
+}
