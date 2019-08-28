@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>HTML5 Periodic Table of Elements</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/atom-one-light.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr.js"></script>
   </head>
@@ -35,22 +36,25 @@
 <!--<span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!">extended information</span>-->
       <a href="#" id="all" class="small round button">All</a>
       <a href="#" id="core" class="small round button">Core</a>
+      <a href="#" id="text" class="small round button">Core Text</a>
+      <a href="#" id="media" class="small round button">Core Media</a>
+      <!-- <a href="#" id="text" class="small round button">Text</a> -->
       <a href="#" id="setup" class="small round button">Setup</a>
       <a href="#" id="page-section" class="small round button">Page Structure</a>
 <!--      <a href="#" id="content" class="small round button">Content</a>-->
-      <a href="#" id="basic-content" class="small round button">Basic Content</a>
-      <a href="#" id="lists" class="small round button">Lists</a>
-      <a href="#" id="grouping" class="small round button">Misc. Block</a>
+      
+       <!-- <a href="#" id="lists" class="small round button">Lists</a>
+     <a href="#" id="grouping" class="small round button">Misc. Block</a>
       <a href="#" id="forms" class="small round button">Forms</a>
-      <a href="#" id="tables" class="small round button">Tables</a>
-      <a href="#" id="text" class="small round button">Inline Text</a>
-      <a href="#" id="embedded" class="small round button">Embedded</a><br/>
-  
+      <a href="#" id="tables" class="small round button">Tables</a> -->
+      
+      <!-- <a href="#" id="embedded" class="small round button">Embedded</a><br/> -->
+      <!-- <a href="#" id="basic-content" class="small round button">Basic Content</a> -->
       <!-- <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-5" id="elements"> -->
       <ul class="element-list" id="elements">
         <li>
           <div class="element setup core">
-            <div class="type">not content</div>
+            <div class="type">setup</div>
             <div class="parents">no parent</div>
             <div class="name"><a href="#" data-reveal-id="doctype">doctype</a></div>
             <div class="frequency">common</div>
@@ -75,7 +79,7 @@
         </li>
         <li>
           <div class="element setup core">
-            <div class="type">not content</div>
+            <div class="type">setup</div>
             <div class="parents">no parent</div>
             <div class="name">html</div>
             <div class="frequency">common</div>
@@ -84,7 +88,7 @@
         </li>
         <li>
           <div class="element setup core">
-            <div class="type">not content</div>
+            <div class="type">setup</div>
             <div class="parents">html</div>
             <div class="name">    <a href="#" data-reveal-id="head">head</a></div>
             <div class="frequency">common</div>
@@ -115,7 +119,7 @@
         </li>
         <li>
           <div class="element setup core">
-            <div class="type">not content</div>
+            <div class="type">setup</div>
             <div class="parents">head</div>
             <div class="name">    <a href="#" data-reveal-id="meta">meta</a></div>
             <div class="frequency">common</div>
@@ -158,7 +162,7 @@
         </li>
         <li>
           <div class="element setup core">
-            <div class="type">not content</div>
+            <div class="type">setup</div>
             <div class="parents">head</div>
             <div class="name">    <a href="#" data-reveal-id="link">link</a></div>
             <div class="frequency">common</div>
@@ -193,7 +197,7 @@
         </li>
         <li>
           <div class="element setup core">
-            <div class="type">not content</div>
+            <div class="type">setup</div>
             <div class="parents">head</div>
             <div class="name">    <a href="#" data-reveal-id="style">style</a></div>
             <div class="frequency">common</div>
@@ -216,8 +220,8 @@
         </li>
         <li>
           <div class="element setup">
-            <div class="type">not content</div>
-            <div class="parents">head or body</div>
+            <div class="type">setup</div>
+            <div class="parents">head/body</div>
             <div class="name">script</div>
             <div class="frequency">common</div>
             <div class="importance">2</div>
@@ -225,7 +229,7 @@
         </li>
         <li>
           <div class="element setup core">
-            <div class="type">not content</div>
+            <div class="type">setup</div>
             <div class="parents">html</div>
             <div class="name">body</div>
             <div class="frequency">common</div>
@@ -235,7 +239,7 @@
 
         <!-- Page block -->
         <li>
-          <div class="element content page-section core">
+          <div class="element content page-section core grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">    <a href="#" data-reveal-id="div">div</a></div>
@@ -269,7 +273,7 @@
           <!-- end .reveal-modal -->
         </li>
         <li>
-          <div class="element content page-section core">
+          <div class="element content page-section core grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">header</div>
@@ -278,7 +282,7 @@
           </div>
         </li>
         <li>
-          <div class="element content page-section core">
+          <div class="element content page-section core grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">footer</div>
@@ -287,7 +291,7 @@
           </div>
         </li>
         <li>
-          <div class="element content page-section core">
+          <div class="element content page-section core grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">nav</div>
@@ -296,7 +300,7 @@
           </div>
         </li>
         <li>
-          <div class="element content page-section">
+          <div class="element content page-section grouping">
             <div class="type">structure</div>
             <div class="parents">body</div>
             <div class="name">main</div>
@@ -305,7 +309,7 @@
           </div>
         </li>
         <li>
-          <div class="element content page-section core">
+          <div class="element content page-section core grouping">
             <div class="type">structure</div>
             <div class="parents">body</div>
             <div class="name">article</div>
@@ -314,7 +318,7 @@
           </div>
         </li>
         <li>
-          <div class="element content page-section core">
+          <div class="element content page-section core grouping">
             <div class="type">structure</div>
             <div class="parents">body</div>
             <div class="name">section</div>
@@ -323,7 +327,7 @@
           </div>
         </li>
         <li>
-          <div class="element content page-section">
+          <div class="element content page-section grouping">
             <div class="type">structure</div>
             <div class="parents">body</div>
             <div class="name">aside</div>
@@ -332,7 +336,7 @@
           </div>
         </li>
         <li>
-          <div class="element content page-section">
+          <div class="element content page-section grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">address</div>
@@ -341,69 +345,113 @@
           </div>
         </li>
 
-
+        <!-- ============== HEADINGS ================== -->
         <li>
-          <div class="element content basic-content core">
+          <div class="element content basic-content core text">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">h1</div>
+            <div class="name"><a href="#" data-reveal-id="h1">h1</a></div>
+            <div class="frequency">common</div>
+            <div class="importance">1</div>
+          </div>
+          
+          <!-- begin .reveal-modal -->
+          <div id="h1" class="reveal-modal" data-reveal>
+            <h2>h1, h2, h3, h4, h5, h6</h2>
+            
+            <p class="lead">Represent headings and subheadings. These elements rank in importance according to the number in their name. The h1 element is said to have the highest rank, the h6 element has the lowest rank, and two elements with the same name have equal rank.</p>
+          
+            <h3>Example:</h3>
+            <p>Here there is content about bears with h1 main title, the types of bears section in h2 tags and the brown and black bears in h3 tags and so on.</p>
+            <div class="example">
+              <pre><code class="highlight">&lt;h1&gt;All About Bears&lt;/h1&gt;
+&lt;p&gt;Ipsa, placeat obcaecati distinctio numquam quam amet esse odio eveniet unde porro.&lt;/p&gt;
+&lt;h2&gt;Types of Bears&lt;/h2&gt;
+&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit.  &lt;/p&gt;
+&lt;h3&gt;Brown Bearsr&lt;/h3&gt;
+&lt;p&gt;Vero nisi deleniti doloremque magnam, earum animi fugiat, similique saepe ex omnis. &lt;/p&gt;
+&lt;h3&gt;Black Bears&lt;/h3&gt; 
+&lt;p&gt;Itaque libero quos sit velit explicabo? Fuga minima illum dicta. &lt;/p&gt;
+&lt;h4&gt;Black Bear Habitat&lt;/h4&gt; 
+&lt;p&gt;Itaque libero quos sit velit explicabo? Fuga minima illum dicta. &lt;/p&gt;
+&lt;h5&gt;Caves&lt;/h5&gt; 
+&lt;p&gt;Itaque libero quos sit velit explicabo? Fuga minima illum dicta. &lt;/p&gt; </code></pre>
+            </div> <!-- end .example -->
+          
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+        </li>
+        <li>
+          <div class="element content basic-content core text">
+            <div class="type">block</div>
+            <div class="parents">body</div>
+            <div class="name"><a href="#" data-reveal-id="h1">h2</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
         </li>
         <li>
-          <div class="element content basic-content core">
+          <div class="element content basic-content core text">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">h2</div>
+            <div class="name"><a href="#" data-reveal-id="h1">h3</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
         </li>
         <li>
-          <div class="element content basic-content core">
+          <div class="element content basic-content core text">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">h3</div>
+            <div class="name"><a href="#" data-reveal-id="h1">h4</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
         </li>
         <li>
-          <div class="element content basic-content core">
+          <div class="element content basic-content core text">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">h4</div>
+            <div class="name"><a href="#" data-reveal-id="h1">h5</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
         </li>
         <li>
-          <div class="element content basic-content core">
+          <div class="element content basic-content core text">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">h5</div>
+            <div class="name"><a href="#" data-reveal-id="h1">h6</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
         </li>
+        
+        
         <li>
-          <div class="element content basic-content core">
+          <div class="element content basic-content core text">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">h6</div>
+            <div class="name"><a href="#" data-reveal-id="p">p</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
-        </li>
-        <li>
-          <div class="element content basic-content core">
-            <div class="type">block</div>
-            <div class="parents">body</div>
-            <div class="name">p</div>
-            <div class="frequency">common</div>
-            <div class="importance">1</div>
+          <!-- begin .reveal-modal -->
+          <div id="p" class="reveal-modal" data-reveal>
+            <h2>p</h2>
+            
+            <p class="lead">The p element represents a paragraph. If you have a normal paragraph of text then this is what you use.</p>
+          
+            <h3>Example:</h3>
+            <div class="example">
+              <pre><code class="highlight">&lt;p&gt;This is a paragraph of text inside a p tag.&lt;/p&gt;
+</code></pre>
+            </div> <!-- end .example -->
+          
+            <a class="close-reveal-modal">&#215;</a>
           </div>
+          <!-- end .reveal-modal -->
         </li>
 
 
@@ -477,7 +525,7 @@
 
         <!-- Lists -->
         <li>
-          <div class="element content lists core">
+          <div class="element content lists core text">
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">ol</div>
@@ -486,7 +534,7 @@
           </div>
         </li>
         <li>
-          <div class="element content lists core">
+          <div class="element content lists core text">
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">ul</div>
@@ -495,7 +543,7 @@
           </div>
         </li>
         <li>
-          <div class="element content lists core">
+          <div class="element content lists core text">
             <div class="type">block</div>
             <div class="parents">ol , ul</div>
             <div class="name">li</div>
@@ -508,7 +556,7 @@
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">dl</div>
-            <div class="frequency">less common</div>
+            <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
         </li>
@@ -517,7 +565,7 @@
             <div class="type">block</div>
             <div class="parents">dl</div>
             <div class="name">dt</div>
-            <div class="frequency">less common</div>
+            <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
         </li>
@@ -526,7 +574,7 @@
             <div class="type">block</div>
             <div class="parents">dl</div>
             <div class="name">dd</div>
-            <div class="frequency">less common</div>
+            <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
         </li>
@@ -546,26 +594,26 @@
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">pre</div>
-            <div class="frequency">less common</div>
+            <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
         </li>
         <li>
-          <div class="element content grouping">
+          <div class="element content grouping media">
             <div class="type">block</div>
             <div class="parents">body</div>
             <div class="name">figure</div>
-            <div class="frequency">less common</div>
+            <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
         </li>
 
         <li>
-          <div class="element content grouping">
+          <div class="element content grouping media">
             <div class="type">block</div>
             <div class="parents">figure</div>
             <div class="name">figcaption</div>
-            <div class="frequency">less common</div>
+            <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
         </li>
@@ -612,11 +660,11 @@
 
 
 
-        <!-- Embeds -->
+        <!-- Media -->
 
 
         <li>
-          <div class="element content embedded">
+          <div class="element content embedded core media">
             <div class="type">embed</div>
             <div class="parents">block</div>
             <div class="name">img</div>
@@ -625,7 +673,7 @@
           </div>
         </li>
         <li>
-          <div class="element content embedded">
+          <div class="element content embedded media">
             <div class="type">embed</div>
             <div class="parents">block</div>
             <div class="name">video</div>
@@ -634,7 +682,7 @@
           </div>
         </li>
         <li>
-          <div class="element content embedded">
+          <div class="element content embedded media">
             <div class="type">embed</div>
             <div class="parents">block</div>
             <div class="name">audio</div>
@@ -729,7 +777,18 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/shi_jquery.min.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script src="js/highlight/highlight.pack.js"></script>
+    <script src="js/highlight/highlightjs-line-numbers.min.js"></script>
     <script>
+        //call highlighter on code elements with the .highlight class
+        document.addEventListener('DOMContentLoaded', (event) => {
+          document.querySelectorAll('code.highlight').forEach((block) => {
+            hljs.highlightBlock(block);
+            hljs.lineNumbersBlock(block);
+          });
+        });
+        
+    //run JavaScript to show and hide elements (based on js from foundation)
       $(document).foundation();
 
       //multiple classes $( "div, span, p.myClass" ).
@@ -806,6 +865,7 @@
         e.preventDefault();
         showAll();
       });
+      
       $("#core").click(function(e){
         e.preventDefault();
         filterElements("core");console.log('filter core');
@@ -858,6 +918,10 @@
       $("#embedded").click(function(e){
         e.preventDefault();
         filterElements("embedded");console.log('filter embedded');
+      });
+      $("#media").click(function(e){
+        e.preventDefault();
+        filterElements("media");console.log('filter media');
       });
 
 
