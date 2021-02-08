@@ -5,7 +5,7 @@
 //colors
 $grey: #bbbdc0;
 $yellow: #fdeb89;
-$light-yellow: #fcf6d2;
+$light-yellow: darken(#fcf6d2,5%);
 $orange: #e9965c;
 $blue: #48a1e6;
 $light-blue: #77c2e9;
@@ -14,6 +14,11 @@ $green: #92fc74;
 $light-green: #aefca1;
 $dark-green: #64a643;
 $red: lighten(#ef4D4C, 20%);
+$link: darken(orange,10%);
+
+a,a:link{
+	color: $link;
+}
 
 
 #setup{
@@ -121,7 +126,12 @@ color: darken($red, 25%);
 	overflow: hidden;
 	//e9965c orange
 	
-
+	a,a:link,a:visited{
+		text-shadow: 2px 2px 1px #666;
+	}
+	a:hover{
+		text-shadow: 2px 2px 1px #fff;
+	}
 
 	padding: 5px;
 
