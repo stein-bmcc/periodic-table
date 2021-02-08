@@ -62,8 +62,6 @@
             <div class="importance">1*</div>
           </div>
 
-          <!-- <a href="#" data-reveal-id="myModal">Click Me For A Modal</a> -->
-
           <div id="doctype" class="reveal-modal" data-reveal>
             <h2>doctype</h2>
             <p class="lead">The doctype is the first element at the top of the page. It tells the browser what version of HTML you are using.</p>
@@ -82,10 +80,26 @@
           <div class="element setup core">
             <div class="type">setup</div>
             <div class="parents">no parent</div>
-            <div class="name">html</div>
+            <div class="name"><a href="#" data-reveal-id="html">html</a></div>
             <div class="frequency">common</div>
             <div class="importance">1*</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="html" class="reveal-modal" data-reveal="">
+            <h2>html</h2>
+            <p class="lead">The HTML <html> element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" target="blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+        <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element setup core">
@@ -232,10 +246,28 @@
           <div class="element setup core">
             <div class="type">setup</div>
             <div class="parents">html</div>
-            <div class="name">body</div>
+            <div class="name"><a href="#" data-reveal-id="body">body</a></div>
             <div class="frequency">common</div>
             <div class="importance">1*</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="body" class="reveal-modal" data-reveal>
+            <h2>body</h2>
+            <p class="lead">The <strong>HTML <code>&lt;body&gt;</code> Element</strong> represents the visible content of an HTML&nbsp;document. All content elements must be inside of the <code>&lt;body&gt;</code> elementThere can be only one <code>&lt;body&gt;</code> element in a document.</p>
+            <p class="source">modified from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Document title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
 
         <!-- Page block -->
@@ -277,74 +309,228 @@
           <div class="element content page-section core grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">header</div>
+            <div class="name"><a href="#" data-reveal-id="header">header</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="header" class="reveal-modal" data-reveal>
+            <h2>header</h2>
+            <p class="lead">The <strong>HTML <code>&lt;header&gt;</code> element</strong> represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, navigation,  a search form, an author name, and other elements.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;header&gt;
+  &lt;h1&gt;Main Page Title&lt;/h1&gt;
+  &lt;img src=&quot;mdn-logo-sm.png&quot; alt=&quot;MDN logo&quot;&gt;
+&lt;/header&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content page-section core grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">footer</div>
+            <div class="name"><a href="#" data-reveal-id="footer">footer</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          
+          <!-- begin .reveal-modal -->  
+          <div id="footer" class="reveal-modal" data-reveal="">
+            <h2>footer</h2>
+            <p class="lead">The <strong>HTML <code>&lt;footer&gt;</code> element</strong> represents a footer for its nearest <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content">sectioning content</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_root">sectioning root</a> element. A footer typically contains information about the author of the section, copyright data or links to related documents.</p>
+            <p class="source"><a href="" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;footer&gt;
+    &lt;p&gt;&copy; 20221 Some Person&lt;/p&gt;
+&lt;/footer&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+
         </li>
         <li>
           <div class="element content page-section core grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">nav</div>
+            <div class="name"><a href="#" data-reveal-id="nav">nav</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="nav" class="reveal-modal" data-reveal>
+            <h2>nav</h2>
+            <p class="lead">The <strong>HTML <code>&lt;nav&gt;</code> element</strong> represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;nav class=&quot;crumbs&quot;&gt;
+    &lt;ol&gt;
+        &lt;li class=&quot;crumb&quot;&gt;&lt;a href=&quot;#&quot;&gt;Bikes&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;crumb&quot;&gt;&lt;a href=&quot;#&quot;&gt;BMX&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;crumb&quot;&gt;Jump Bike 3000&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+
+
         </li>
         <li>
           <div class="element content page-section grouping">
             <div class="type">structure</div>
             <div class="parents">body</div>
-            <div class="name">main</div>
+            <div class="name"><a href="#" data-reveal-id="main">main</a></div>
             <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="main" class="reveal-modal" data-reveal="">
+            <h2>main</h2>
+            <p class="lead">The <strong>HTML <code>&lt;main&gt;</code> element</strong> represents the dominant content of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a> of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.</p>
+            <p class="source"><a href="" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;header&gt;&lt;h1&gt;Gecko facts&lt;/h1&gt;&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Gecko Habitat&lt;/h2&gt;
+    &lt;p&gt;Geckos are a group of usually small, usually nocturnal lizards.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;&copy; copyright 2021&lt;/footer&gt;</code></pre>
+
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content page-section core grouping">
             <div class="type">structure</div>
             <div class="parents">body</div>
-            <div class="name">article</div>
+            <div class="name"><a href="#" data-reveal-id="article">article</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="article" class="reveal-modal" data-reveal="">
+            <h2>article</h2>
+            <p class="lead">The <strong>HTML <code>&lt;article&gt;</code> element</strong> represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication).</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight"> &lt;article class=&quot;film_review&quot;&gt;
+  &lt;h2&gt;Jurassic Park&lt;/h2&gt;
+  &lt;section class=&quot;main_review&quot;&gt;
+    &lt;h3&gt;Review&lt;/h3&gt;
+    &lt;p&gt;Dinos were great!&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;
+    &lt;p&gt;
+      Posted on
+      &lt;time datetime=&quot;2015-05-15 19:00&quot;&gt;May 15&lt;/time&gt;
+      by Staff.
+    &lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;                
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content page-section core grouping">
             <div class="type">structure</div>
             <div class="parents">body</div>
-            <div class="name">section</div>
+            <div class="name"><a href="#" data-reveal-id="section">section</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="section" class="reveal-modal" data-reveal="">
+            <h2>section</h2>
+            <p class="lead">The <strong>HTML <code>&lt;section&gt;</code> element</strong> represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;section&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Bunch of awesome content&lt;/p&gt;
+&lt;/section&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content page-section grouping">
             <div class="type">structure</div>
             <div class="parents">body</div>
-            <div class="name">aside</div>
+            <div class="name"><a href="#" data-reveal-id="aside">aside</a></div>
             <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="aside" class="reveal-modal" data-reveal>
+            <h2>aside</h2>
+            <p class="lead">The <strong>HTML <code>&lt;aside&gt;</code> element</strong> represents a portion of a document whose content is only indirectly related to the document's main content.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;article&gt;
+  &lt;p&gt;
+    The Disney movie &lt;cite&gt;The Little Mermaid&lt;/cite&gt; was
+    first released to theatres in 1989.
+  &lt;/p&gt;
+  &lt;aside&gt;
+    &lt;p&gt;
+      In the Hans Christen Andersen story on which the film is based, the little mermaid is never named.
+    &lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/article&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content page-section grouping">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">address</div>
+            <div class="name"><a href="#" data-reveal-id="address">address</a></div>
             <div class="frequency">uncommon</div>
             <div class="importance">3</div>
           </div>
         </li>
+        <!-- begin .reveal-modal -->  
+        <div id="address" class="reveal-modal" data-reveal="">
+          <h2>address</h2>
+          <p class="lead">The <strong>HTML <code>&lt;address&gt;</code> element</strong> indicates that the enclosed HTML provides contact information for a person or people, or for an organization.</p>
+          <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address" target="_blank">source MDN</a></p>
+          <div class="example">
+            <pre><code class="highlight">&lt;address&gt;
+  You can contact author at &lt;a href=&quot;http://www.somedomain.com/contact&quot;&gt;
+  www.somedomain.com&lt;/a&gt;.&lt;br&gt;
+  If you see any bugs, please &lt;a href=&quot;mailto:webmaster@somedomain.com&quot;&gt;
+  contact webmaster&lt;/a&gt;.&lt;br&gt;
+  You may also want to visit us:&lt;br&gt;
+  Mozilla Foundation&lt;br&gt;
+  331 E Evelyn Ave&lt;br&gt;
+  Mountain View, CA 94041&lt;br&gt;
+  USA
+&lt;/address&gt;
+
+            </code></pre>
+          </div>
+          <a href="" class="close-reveal-modal">&#215;</a>
+        </div>
+        <!-- end .reveal-modal -->
 
         <!-- ============== HEADINGS ================== -->
         <li>
@@ -355,7 +541,8 @@
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
-          
+        
+
           <!-- begin .reveal-modal -->
           <div id="h1" class="reveal-modal" data-reveal>
             <h2>h1, h2, h3, h4, h5, h6</h2>
@@ -376,7 +563,9 @@
 &lt;h4&gt;Black Bear Habitat&lt;/h4&gt; 
 &lt;p&gt;Itaque libero quos sit velit explicabo? Fuga minima illum dicta. &lt;/p&gt;
 &lt;h5&gt;Caves&lt;/h5&gt; 
-&lt;p&gt;Itaque libero quos sit velit explicabo? Fuga minima illum dicta. &lt;/p&gt; </code></pre>
+&lt;p&gt;Itaque libero quos sit velit explicabo? Fuga minima illum dicta. &lt;/p&gt; 
+&lt;h6&gt;Trees&lt;/h6&gt; 
+</code></pre>
             </div> <!-- end .example -->
           
             <a class="close-reveal-modal">&#215;</a>
@@ -462,64 +651,153 @@
           <div class="element content basic-content text core">
             <div class="type">inline</div>
             <div class="parents">any block</div>
-            <div class="name">span</div>
+            <div class="name"><a href="#" data-reveal-id="span">span</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="span" class="reveal-modal" data-reveal="">
+            <h2>span</h2>
+            <p class="lead">The <strong>HTML <code>&lt;span&gt;</code> element</strong> is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#attr-class"><code>class</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a> attributes), or because they share attribute values, such as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#attr-lang"><code>lang</code></a>. It should be used only when no other semantic element is appropriate. <code>&lt;span&gt;</code> is very much like a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a> element, but <code>&lt;div&gt;</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">block-level element</a> whereas a <code>&lt;span&gt;</code> is an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">inline element</a>.</p>
+            <p class="source"><a href="" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;p&gt;Gradually add the &lt;span class=&quot;ingredient&quot;&gt;olive oil&lt;/span&gt; 
+while running the blender slowly.&lt;/p&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content basic-content text core">
             <div class="type">inline</div>
             <div class="parents">any block</div>
-            <div class="name">a</div>
+            <div class="name"><a href="#" data-reveal-id="a">a</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="a" class="reveal-modal" data-reveal>
+            <h2>a</h2>
+            <p class="lead">The <strong>HTML <code>&lt;a&gt;</code> element</strong> (or <em>anchor</em> element), with its <code>href</code> attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</span> Content within each <code>&lt;a&gt;</code> <strong>should</strong> indicate the link's destination. If the&nbsp;<code>href</code> attribute is present, pressing the enter key while focused on the <code>&lt;a&gt;</code>&nbsp;element will activate it.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;a href=&quot;https://example.com&quot;&gt;Website&lt;/a&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content basic-content text core">
             <div class="type">inline</div>
             <div class="parents">any block</div>
-            <div class="name">strong</div>
+            <div class="name"><a href="#" data-reveal-id="strong">strong</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="strong" class="reveal-modal" data-reveal>
+            <h2>strong</h2>
+            <p class="lead">The HTML <strong>Strong Importance Element</strong> (<strong><code>&lt;strong&gt;</code></strong>) indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;p&gt;Before proceeding, &lt;strong&gt;make sure you put on your safety goggles&lt;/strong&gt;.&lt;/p&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content basic-content text core">
             <div class="type">inline</div>
             <div class="parents">any block</div>
-            <div class="name">b</div>
+            <div class="name"><a href="#" data-reveal-id="b">b</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="b" class="reveal-modal" data-reveal>
+            <h2>b</h2>
+            <p class="lead">The <strong>HTML Bring Attention To element (<code>&lt;b&gt;</code>)</strong> is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance.</span> This was formerly known as the Boldface element, and most browsers still draw the text in boldface. However, you should not use <code>&lt;b&gt;</code> for styling text; instead, you should use the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a> property to create boldface text, or the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a> element to indicate that text is of special importance.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;p&gt;
+  This article describes several &lt;b class=&quot;keywords&quot;&gt;text-level&lt;/b&gt; elements.
+&lt;/p&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content basic-content text core">
             <div class="type">inline</div>
             <div class="parents">any block</div>
-            <div class="name">em</div>
+            <div class="name"><a href="#" data-reveal-id="em">em</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="em" class="reveal-modal" data-reveal="">
+            <h2>em</h2>
+            <p class="lead">The <strong>HTML <code>&lt;em&gt;</code> element</strong> marks text that has stress emphasis. The <code>&lt;em&gt;</code> element can be nested, with each level of nesting indicating a greater degree of emphasis.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;p&gt;This is &lt;em&gt;not&lt;/em&gt; a drill!&lt;/p&gt;</code></pre>
+            </div>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content basic-content text core">
             <div class="type">inline</div>
             <div class="parents">any block</div>
-            <div class="name">i</div>
+            <div class="name"><a href="#" data-reveal-id="i">i</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="i" class="reveal-modal" data-reveal="">
+            <h2>i</h2>
+            <p class="lead">The <strong>HTML Idiomatic&nbsp;Text element (<code>&lt;i&gt;</code>)</strong> represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others.</span>&nbsp;Historically, these have been presented using italicized type, which is the original source of the <code>&lt;i&gt;</code>&nbsp;naming of this element.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;p&gt;The term &lt;i&gt;bandwidth&lt;/i&gt; describes the measure of how much information can pass
+  through a data connection in a given amount of time.&lt;/p&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+
         </li>
         <li>
           <div class="element content text core">
             <div class="type">inline</div>
             <div class="parents">any block</div>
-            <div class="name">br</div>
+            <div class="name"><a href="#" data-reveal-id="br">br</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="br" class="reveal-modal" data-reveal>
+            <h2>br</h2>
+            <p class="lead">The <strong>HTML <code>&lt;br&gt;</code> element</strong> produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;address&gt;
+  Mozilla&lt;br&gt;
+  331 E. Evelyn Avenue&lt;br&gt;
+  Mountain View, CA&lt;br&gt;
+  94041&lt;br&gt;
+  USA&lt;br&gt;
+&lt;/address&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
 
 
@@ -529,34 +807,115 @@
           <div class="element content lists core text">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">ol</div>
+            <div class="name"><a href="#" data-reveal-id="ol">ol</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="ol" class="reveal-modal" data-reveal>
+            <h2>ol</h2>
+            <p class="lead">The <strong>HTML <code>&lt;ol&gt;</code> element</strong> represents an ordered list of items — typically rendered as a numbered list</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;ol&gt;
+  &lt;li&gt;right foot up,&lt;/li&gt;
+  &lt;li&gt;left foot slide&lt;/li&gt;
+  &lt;li&gt;Left foot up,&lt;/li&gt;
+  &lt;li&gt;right foot slide&lt;/li&gt;
+&lt;/ol&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content lists core text">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">ul</div>
+            <div class="name"><a href="#" data-reveal-id="ul">ul</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="ul" class="reveal-modal" data-reveal="">
+            <h2>ul</h2>
+            <p class="lead">The <strong>HTML <code>&lt;ul&gt;</code> element</strong> represents an unordered list of items, typically rendered as a bulleted list.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;ul&gt;
+  &lt;li&gt;first item&lt;/li&gt;
+  &lt;li&gt;second item&lt;/li&gt;
+  &lt;li&gt;third item&lt;/li&gt;
+&lt;/ul&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content lists core text">
             <div class="type">block</div>
             <div class="parents">ol , ul</div>
-            <div class="name">li</div>
+            <div class="name"><a href="#" data-reveal-id="li">li</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          
+          <!-- begin .reveal-modal -->  
+          <div id="li" class="reveal-modal" data-reveal="">
+            <h2>li</h2>
+            <p class="lead">The <strong>HTML <code>&lt;li&gt;</code> element</strong> is used to represent an item in a list.</span> It must be contained in a parent element: an ordered list (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a>), an unordered list (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a>), or a menu (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu"><code>&lt;menu&gt;</code></a>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.</p>
+            <p class="source"><a href="" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;ol&gt;
+  &lt;li&gt;right foot up,&lt;/li&gt;
+  &lt;li&gt;left foot slide&lt;/li&gt;
+  &lt;li&gt;Left foot up,&lt;/li&gt;
+  &lt;li&gt;right foot slide&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content lists">
             <div class="type">block</div>
             <div class="parents">body</div>
-            <div class="name">dl</div>
+            <div class="name"><a href="#" data-reveal-id="dl">dl</a></div>
+            <div class="frequency">less used</div>
+            <div class="importance">2</div>
+          </div>
+          <!-- begin .reveal-modal -->  
+          <div id="dl" class="reveal-modal" data-reveal="">
+            <h2>dl</h2>
+            <p class="lead">The <strong>HTML <code>&lt;dl&gt;</code></strong> element represents a description list. The element encloses a list of groups of terms (specified using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a> element) and descriptions (provided by <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd"><code>&lt;dd&gt;</code></a> elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;dl&gt;
+  &lt;dt&gt;Firefox&lt;/dt&gt;
+  &lt;dd&gt;
+    A free, open source, cross-platform,
+    graphical web browser developed by the
+    Mozilla Corporation and hundreds of
+    volunteers.
+  &lt;/dd&gt;
+
+  &lt;!-- Other terms and descriptions --&gt;
+&lt;/dl&gt;
+              </code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
+        </li>
+        <li>
+          <div class="element content lists">
+            <div class="type">block</div>
+            <div class="parents">dl</div>
+            <div class="name"><a href="#" data-reveal-id="dl">dt</a></div>
             <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
@@ -565,16 +924,7 @@
           <div class="element content lists">
             <div class="type">block</div>
             <div class="parents">dl</div>
-            <div class="name">dt</div>
-            <div class="frequency">less used</div>
-            <div class="importance">2</div>
-          </div>
-        </li>
-        <li>
-          <div class="element content lists">
-            <div class="type">block</div>
-            <div class="parents">dl</div>
-            <div class="name">dd</div>
+            <div class="name"><a href="#" data-reveal-id="dl">dd</a></div>
             <div class="frequency">less used</div>
             <div class="importance">2</div>
           </div>
@@ -668,10 +1018,22 @@
           <div class="element content embedded core media">
             <div class="type">embed</div>
             <div class="parents">inline</div>
-            <div class="name">img</div>
+            <div class="name"><a href="#" data-reveal-id="img">img</a></div>
             <div class="frequency">common</div>
             <div class="importance">1</div>
           </div>
+          <!-- begin .reveal-modal -->  
+          <div id="img" class="reveal-modal" data-reveal="">
+            <h2>img</h2>
+            <p class="lead">The <strong>HTML <code>&lt;img&gt;</code> element</strong> embeds an image into the document.The src attribute is required, and contains the path to the image you want to embed.
+              The alt attribute holds a text description of the image, which isn't mandatory but is incredibly useful for accessibility. Screen readers read this description out to their users so they know what the image means.</p>
+            <p class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">source MDN</a></p>
+            <div class="example">
+              <pre><code class="highlight">&lt;img src=&quot;images/mydoc.jpg&quot; alt=&quot;dog with a bone&quot;&gt;</code></pre>
+            </div>
+            <a href="" class="close-reveal-modal">&#215;</a>
+          </div>
+          <!-- end .reveal-modal -->
         </li>
         <li>
           <div class="element content embedded media">
