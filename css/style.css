@@ -17,6 +17,10 @@
   --structure-fg: #222222;
   --setup-bg: #303740;
   --setup-fg: #ffffff;
+  --interactive-bg: #cce5f5;
+  --interactive-fg: #222222;
+  --form-bg: #b3d5a8;
+  --form-fg: #222222;
   --code-bg: #f5f6f8;
   --code-fg: #222222;
   --token-comment: #515963;
@@ -122,13 +126,6 @@ button[aria-pressed="true"] {
 .site-header {
   padding-block-start: 3rem;
 }
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.13em;
-  font-size: 0.8rem;
-  font-weight: 650;
-  color: var(--muted-ink);
-}
 .intro {
   max-inline-size: 65ch;
   font-size: 1.1rem;
@@ -190,6 +187,14 @@ main {
 [data-category="setup"] {
   --category-bg: var(--setup-bg);
   --category-fg: var(--setup-fg);
+}
+[data-category="interactive"] {
+  --category-bg: var(--interactive-bg);
+  --category-fg: var(--interactive-fg);
+}
+[data-category="form"] {
+  --category-bg: var(--form-bg);
+  --category-fg: var(--form-fg);
 }
 .element-list {
   display: grid;
