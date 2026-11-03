@@ -4,11 +4,12 @@ Review date: November 3, 2026. The analysis below records the original repositor
 
 ## Implementation status
 
-- Implemented Grid page/card layout, Flexbox card interiors, the approved six-color palette, and separate visual categories/filter memberships.
+- Implemented Grid page/card layout, Flexbox card interiors, the approved eight-color palette, and separate visual categories/filter memberships.
 - The reading guide now includes a labeled card anatomy diagram and describes frequency as opinionated typical website usage, independently of learning priority.
+- Removed the header eyebrow. Added Interactive (pastel blue) and Form (a darker pastel green than Core) and arranged the controls in the requested order.
 - Replaced Foundation/jQuery behavior with a vanilla JavaScript module, native dialogs, keyboard focus handling, count announcements, and a no-script fragment-link reference.
 - Standardized code examples on locally vendored Prism 1.30.0 (core + markup + Line Numbers), with copy feedback below each example. The Plain Text toggle has been removed; generated line numbers are excluded from copying and text selection.
-- Completed every existing card and added the 17 first-batch elements below plus the essential missing `title` entry: **73 cards with 73 sourced definitions and examples**. Original filter memberships are retained. The title card is now placed after head among Setup entries, and main is rated common / priority 1; the proposed Core membership changes are not silently applied.
+- Completed every existing card and added the 17 first-batch elements below plus the essential missing `title` entry: **73 cards with 73 sourced definitions and examples**. Existing filter memberships are retained, with Interactive and Form memberships added. Cards are grouped in filter order; title follows head among Setup entries, and main is rated common / priority 1. Shared interactive form controls stay together in the final Form group with the Form color.
 - Replaced the old educational wording/examples with MDN-attributed summaries and newly written examples. Removed obsolete libraries, themes, Sass, and editor configuration. Documented source provenance and the existing code/content license scopes in `CONTENT_SOURCES.md`, `THIRD_PARTY_NOTICES.md`, and README.
 - Added pinned development tools, HTML/syntax/format checks, and browser tests for Chrome, Firefox, and WebKit, including axe and computed foreground/background contrast. See `ACCESSIBILITY.md` for verification results and remaining human review.
 
@@ -17,13 +18,15 @@ The recommendations that follow describe the migration rationale. “Current” 
 | Filter         | Original entries | Modernized entries |
 | -------------- | ---------------- | ------------------ |
 | All            | 55               | 73                 |
+| Setup          | 8                | 9                  |
+| Page Structure | 9                | 13                 |
 | Core           | 31               | 34                 |
 | Core Text      | 17               | 21                 |
 | Core Media     | 5                | 8                  |
-| Page Structure | 9                | 13                 |
-| Setup          | 8                | 9                  |
+| Interactive    | —                | 9                  |
+| Form           | —                | 9                  |
 
-The original 55 cards retain their relative order and exact filter memberships; title has been inserted after head. New memberships account for the count increases; filters overlap, so their counts do not sum to All.
+Existing filter memberships are preserved. The new Interactive and Form filters each contain nine entries and overlap on button, input, select, option, and textarea. The card order now follows the color groups: neutral All-only reference entries, Setup, Page Structure, Core, Core Text, Core Media, Interactive, Form. The non-form interactive cards (a, details, summary, dialog) stay together before Form; shared controls remain in Form. Definitions and source records follow the same order. Filters overlap, so counts do not sum to All.
 
 ## Recommended direction
 
@@ -63,18 +66,20 @@ Completion check: cards align consistently at narrow and wide widths, long metad
 
 ### Selected category palette
 
-Use the following palette for the five category controls plus All. Core uses a softer pastel green; All uses very light grey with black text; Setup uses dark charcoal grey with white text. Core Text, Core Media, and Page Structure retain their proposed backgrounds based on the original element colors.
+Use the following palette for the seven category controls plus All. Core uses a softer pastel green; All uses very light grey with black text; Setup uses dark charcoal grey with white text. Core Text, Core Media, and Page Structure retain their proposed backgrounds based on the original element colors.
 
 | Category/control | Background | Text      | Calculated contrast |
 | ---------------- | ---------- | --------- | ------------------- |
 | All              | `#F2F3F4`  | `#000000` | 18.90:1             |
+| Setup            | `#303740`  | `#FFFFFF` | 12.03:1             |
+| Page Structure   | `#E3CFF6`  | `#222222` | 11.00:1             |
 | Core             | `#D5EDCE`  | `#222222` | 12.75:1             |
 | Core Text        | `#FAF1BA`  | `#222222` | 13.91:1             |
 | Core Media       | `#F7AAAA`  | `#222222` | 8.55:1              |
-| Page Structure   | `#E3CFF6`  | `#222222` | 11.00:1             |
-| Setup            | `#303740`  | `#FFFFFF` | 12.03:1             |
+| Interactive      | `#CCE5F5`  | `#222222` | 12.19:1             |
+| Form             | `#B3D5A8`  | `#222222` | 9.85:1              |
 
-All six text/background combinations exceed AA contrast for normal text. Implement these pairs as CSS custom properties. Preserve the foreground pairing for all card text if these colors are applied to cards; do not inherit the old orange link or importance colors. Multiple filter memberships must not make a card change its visual category. Verify hover, focus, and selected states separately, and indicate the active filter with more than color alone.
+All eight text/background combinations exceed AA contrast for normal text. Implement these pairs as CSS custom properties. Preserve the foreground pairing for all card text if these colors are applied to cards; do not inherit the old orange link or importance colors. Multiple filter memberships must not make a card change its visual category. Verify hover, focus, and selected states separately, and indicate the active filter with more than color alone.
 
 ## 2. Vanilla JavaScript and accessible interactions
 
@@ -131,9 +136,9 @@ HTML5 Doctor now describes its Element Index as historical and directs readers t
 
 These recommendations include newer HTML features and older elements missing from this repository. They are an editorial teaching proposal, not official HTML categories or an assertion that every entry is newly introduced.
 
-Treat the five requested filters as overlapping memberships. **Core** means introductory essentials; **Core Text** means useful text semantics; **Core Media** means common media and their supporting elements; **Page Structure** covers semantic regions and page-level UI containers; **Setup** covers document configuration and advanced templating infrastructure, not just children of `head`. A specialized filter does not automatically imply Core membership, matching the current distinction for `video` and `audio`.
+Treat the filters as overlapping memberships. **Core** means introductory essentials; **Core Text** means useful text semantics; **Core Media** means common media and their supporting elements; **Page Structure** covers semantic regions and page-level UI containers; **Setup** covers document configuration and advanced templating infrastructure, not just children of `head`. **Interactive** contains the nine explicitly selected links, controls, disclosures, and dialog elements. **Form** contains the nine explicitly selected form, label, control, and field-group elements. A specialized filter does not automatically imply Core membership, matching the current distinction for `video` and `audio`.
 
-“All only” below means none of those five filters: retain the more precise visual/category grouping (Forms, Tables, Text, or Embedded). This avoids putting every HTML element into an introductory Core list.
+“All only” in the original expansion proposals below means no membership in the original five teaching filters. The implemented `fieldset` and `legend` now belong to Form, and `details`, `summary`, and `dialog` also belong to Interactive. Review future entries against the expanded filters when adding them rather than putting every HTML element into Core.
 
 | Element(s) to add                                        | Suggested memberships | Priority and teaching purpose                                                                 |
 | -------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------- |
@@ -213,4 +218,4 @@ References: [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [text contrast explanatio
 
 Definition of done: all retained and added cards have reachable definitions, valid source links, and useful examples; requested card positioning works responsively; filters and dialogs work by keyboard; applicable text/background pairs pass AA; third-party code/content notices match what is distributed; and the site remains deployable as static files.
 
-Working assumptions: current evergreen Chrome, Firefox, Safari, and Edge; maintain the teaching-focused curated table rather than implement the entire HTML standard immediately; preserve existing element order and filter behavior until an explicit curriculum change; use no production UI framework. These can be revised before implementation.
+Working assumptions: current evergreen Chrome, Firefox, Safari, and Edge; maintain the teaching-focused curated table rather than implement the entire HTML standard immediately; use the reviewed category order and preserve existing memberships alongside the new Interactive/Form memberships; use no production UI framework. These can be revised before implementation.

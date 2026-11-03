@@ -7,7 +7,7 @@ Verified November 3, 2026 on the `modernization` implementation. This records ch
 The full 24-test suite passes across installed Google Chrome and Playwright Firefox/WebKit. Checks include:
 
 - All 73 cards have source links, definitions, and HTML examples, and all 73 open and dismiss correctly in each browser.
-- All six filters display the expected memberships, expose their pressed state, update a polite result count, and leave card colors stable.
+- All eight filters display the expected memberships, expose their pressed state, update a polite result count, and leave card colors stable.
 - Dialogs start focus on the close button, keep Tab/Shift+Tab within the content, close with Escape or the close button, and return focus to their opener. The native modal makes background content inert.
 - Copy preserves the exact source text; clipboard failure provides a manual-copy instruction. Line numbers are hidden from assistive technology and excluded from both copied source and manually selected text. The copy button follows the example; there is no Plain Text toggle.
 - Fragment links work with scripting disabled; definitions also remain available when native dialogs are unsupported. Blocking Prism still leaves readable source code.
@@ -20,7 +20,7 @@ axe-core checks for WCAG A/AA rules through WCAG 2.2 produce zero violations on 
 
 `npm test` writes per-browser `computed-contrast.json` files beneath `test-results/` and attaches them to Playwright results. Generated reports are ignored by Git.
 
-The saved reports agree across all three engines: **16 distinct rendered text/background pairs**, with a lowest ratio of **6.56:1**. The final unsupported-dialog fallback and report-writing checks were also rerun successfully after the full suite.
+The saved reports agree across all three engines: **18 distinct rendered text/background pairs**, with a lowest ratio of **6.56:1**. The final unsupported-dialog fallback and report-writing checks were also rerun successfully after the full suite.
 
 | Use                             | Foreground | Background | Contrast |
 | ------------------------------- | ---------- | ---------- | -------- |
@@ -33,6 +33,8 @@ The saved reports agree across all three engines: **16 distinct rendered text/ba
 | Core Media                      | `#222222`  | `#F7AAAA`  | 8.55:1   |
 | Page Structure                  | `#222222`  | `#E3CFF6`  | 11.00:1  |
 | Setup                           | `#FFFFFF`  | `#303740`  | 12.03:1  |
+| Interactive                     | `#222222`  | `#CCE5F5`  | 12.19:1  |
+| Form                            | `#222222`  | `#B3D5A8`  | 9.85:1   |
 | Default example text            | `#222222`  | `#F5F6F8`  | 14.71:1  |
 | Line numbers                    | `#52565C`  | `#F5F6F8`  | 6.83:1   |
 | Comments / doctype              | `#515963`  | `#F5F6F8`  | 6.56:1   |

@@ -4,6 +4,38 @@ import { writeFile } from "node:fs/promises";
 
 const require = createRequire(import.meta.url);
 const axePath = require.resolve("axe-core/axe.min.js");
+const filterOrder = [
+  "all",
+  "setup",
+  "page-section",
+  "core",
+  "text",
+  "media",
+  "interactive",
+  "form",
+];
+const interactiveElements = [
+  "a",
+  "button",
+  "input",
+  "select",
+  "option",
+  "textarea",
+  "details",
+  "summary",
+  "dialog",
+];
+const formElements = [
+  "form",
+  "label",
+  "input",
+  "textarea",
+  "select",
+  "option",
+  "button",
+  "fieldset",
+  "legend",
+];
 const additions = [
   "picture",
   "source",
@@ -130,13 +162,67 @@ test("every card has complete sourced content; filters preserve membership and c
   const names = await page
     .locator("#elements [data-definition]")
     .allTextContents();
-  expect(names.slice(0, 5).map((name) => name.trim())).toEqual([
+  const setupNames = await page
+    .locator('#elements li[data-filters~="setup"] .name')
+    .allTextContents();
+  expect(setupNames.slice(0, 5).map((name) => name.trim())).toEqual([
     "doctype",
     "html",
     "head",
     "title",
     "meta",
   ]);
+  await expect(page.locator(".eyebrow")).toHaveCount(0);
+  expect(
+    await page
+      .locator(".filters button")
+      .evaluateAll((buttons) => buttons.map((button) => button.dataset.filter)),
+  ).toEqual(filterOrder);
+  expect(
+    await page
+      .locator(".filters button")
+      .allTextContents()
+      .then((items) => items.map((name) => name.trim())),
+  ).toEqual([
+    "All",
+    "Setup",
+    "Page Structure",
+    "Core",
+    "Core Text",
+    "Core Media",
+    "Interactive",
+    "Form",
+  ]);
+  const categories = await page
+    .locator("#elements .element")
+    .evaluateAll((cards) => cards.map((card) => card.dataset.category));
+  expect(categories.map((category) => filterOrder.indexOf(category))).toEqual(
+    categories
+      .map((category) => filterOrder.indexOf(category))
+      .sort((a, b) => a - b),
+  );
+  expect(names.slice(-9).map((name) => name.trim())).toEqual(formElements);
+  for (const [filter, expectedNames] of [
+    ["interactive", interactiveElements],
+    ["form", formElements],
+  ]) {
+    const members = await page
+      .locator(`#elements li[data-filters~="${filter}"] .name`)
+      .allTextContents();
+    expect(members.map((name) => name.trim()).sort()).toEqual(
+      [...expectedNames].sort(),
+    );
+  }
+  for (const name of interactiveElements) {
+    const card = page
+      .locator(`[data-definition="definition-${name}"]`)
+      .locator("..", { has: page.locator("a") })
+      .locator("..");
+    await expect(card).toHaveAttribute(
+      "data-category",
+      formElements.includes(name) ? "form" : "interactive",
+    );
+  }
   await expect(page.locator(".card-anatomy .anatomy-labels dt")).toHaveCount(5);
   const cardData = await page.locator("#elements > li").evaluateAll((cards) =>
     cards.map((card) => ({
@@ -157,14 +243,7 @@ test("every card has complete sourced content; filters preserve membership and c
     await expect(
       page.locator(`[data-definition="definition-${name}"]`),
     ).toHaveCount(1);
-  for (const filter of [
-    "core",
-    "text",
-    "media",
-    "page-section",
-    "setup",
-    "all",
-  ]) {
+  for (const filter of [...filterOrder.slice(1), "all"]) {
     const control = page.locator(`[data-filter="${filter}"]`);
     await control.click();
     const expected = cardData.filter(
@@ -394,14 +473,7 @@ test("AA automated audit and computed text contrast cover page, filters, and all
     for (const pair of await contrastPairs(page)) pairs.set(pair.colors, pair);
   }
   await collect();
-  for (const filter of [
-    "all",
-    "core",
-    "text",
-    "media",
-    "page-section",
-    "setup",
-  ]) {
+  for (const filter of filterOrder) {
     const button = page.locator(`[data-filter="${filter}"]`);
     await button.click();
     await button.hover();
