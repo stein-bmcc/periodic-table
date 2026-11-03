@@ -1,0 +1,26 @@
+{
+  "name": "html-periodic-table",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A static, accessible teaching reference for HTML elements",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "format": "prettier --write index.html css/style.css js/main.js scripts/*.mjs tests/*.js playwright.config.js *.md package.json .htmlvalidate.json",
+    "format:check": "prettier --check index.html css/style.css js/main.js scripts/*.mjs tests/*.js playwright.config.js *.md package.json .htmlvalidate.json",
+    "lint": "node --check js/main.js && html-validate index.html",
+    "test": "playwright test",
+    "check": "npm run lint && npm run format:check && npm test",
+    "vendor:prism": "node scripts/vendor-prism.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "axe-core": "4.14.0",
+    "html-validate": "11.18.0",
+    "prettier": "3.9.10",
+    "prismjs": "1.30.0"
+  }
+}

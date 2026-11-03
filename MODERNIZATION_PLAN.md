@@ -1,6 +1,29 @@
 # Periodic table modernization plan
 
-Review date: November 3, 2026. This document proposes changes; the application has not been modified.
+Review date: November 3, 2026. The analysis below records the original repository and selected design. The initial modernization has now been implemented on the `modernization` branch; later-batch suggestions remain a backlog.
+
+## Implementation status
+
+- Implemented Grid page/card layout, Flexbox card interiors, the approved six-color palette, and separate visual categories/filter memberships.
+- The reading guide now includes a labeled card anatomy diagram and describes frequency as opinionated typical website usage, independently of learning priority.
+- Replaced Foundation/jQuery behavior with a vanilla JavaScript module, native dialogs, keyboard focus handling, count announcements, and a no-script fragment-link reference.
+- Standardized code examples on locally vendored Prism 1.30.0 (core + markup + Line Numbers), with copy feedback below each example. The Plain Text toggle has been removed; generated line numbers are excluded from copying and text selection.
+- Completed every existing card and added the 17 first-batch elements below plus the essential missing `title` entry: **73 cards with 73 sourced definitions and examples**. Original filter memberships are retained. The title card is now placed after head among Setup entries, and main is rated common / priority 1; the proposed Core membership changes are not silently applied.
+- Replaced the old educational wording/examples with MDN-attributed summaries and newly written examples. Removed obsolete libraries, themes, Sass, and editor configuration. Documented source provenance and the existing code/content license scopes in `CONTENT_SOURCES.md`, `THIRD_PARTY_NOTICES.md`, and README.
+- Added pinned development tools, HTML/syntax/format checks, and browser tests for Chrome, Firefox, and WebKit, including axe and computed foreground/background contrast. See `ACCESSIBILITY.md` for verification results and remaining human review.
+
+The recommendations that follow describe the migration rationale. “Current” or “existing” in the findings/contrast baseline means the pre-modernization version. First-batch additions are complete; next/later/optional additions are intentionally separate follow-up batches.
+
+| Filter         | Original entries | Modernized entries |
+| -------------- | ---------------- | ------------------ |
+| All            | 55               | 73                 |
+| Core           | 31               | 34                 |
+| Core Text      | 17               | 21                 |
+| Core Media     | 5                | 8                  |
+| Page Structure | 9                | 13                 |
+| Setup          | 8                | 9                  |
+
+The original 55 cards retain their relative order and exact filter memberships; title has been inserted after head. New memberships account for the count increases; filters overlap, so their counts do not sum to All.
 
 ## Recommended direction
 
@@ -10,18 +33,18 @@ Use plain CSS with custom properties as the styling source of truth. The existin
 
 ## Findings in the current repository
 
-| Area | Evidence | Implication |
-| --- | --- | --- |
-| Layout | `index.html` uses Foundation `.row` / `.columns`; `sass/style.scss` floats card list items at 50%, 25%, and 20% widths. | Replace framework layout and floats together. |
-| Cards | `.type`, `.parents`, `.frequency`, and `.importance` float; `.name` uses padding and clearing. | Centering depends on content and padding rather than available space. |
-| JavaScript | jQuery 2.0.3, Foundation 5.0.3, Modernizr, and a large inline script. | Native filtering and dialog APIs can replace the active framework interactions. |
-| Highlighting | Five old Snippet containers and 24 `code.highlight` blocks; highlight.js 9.15.10 and a separate line-number plugin. | Standardize examples before removing either highlighter. |
-| Coverage | 55 cards, 30 existing overlays. | 25 cards have no dedicated overlay/trigger; the existing `h1` overlay already discusses all heading levels. |
-| HTML | The `address` overlay is a direct child of the element `<ul>`; the `html` description includes an unescaped `<html>` tag; the `a` definition has a stray closing `span`. | Fix document validity before relying on DOM traversal. |
-| Sources | Empty MDN source links exist for `footer`, `main`, and `span`; several older definitions lack individual source links. | Audit all definitions, not just new entries. |
-| Styling categories | Cards carry several color classes, such as `basic-content core text` or `page-section core grouping`. | Later CSS rules silently decide the visible category color. Separate visual category from filter memberships. |
-| Credits | Root `LICENSE` contains GPLv3; footer labels original/modified content CC BY-SA 4.0 and separately cites MDN and HTML5 Doctor. | Document the scope of each license and the provenance of reused material. |
-| Maintenance | No package manifest, automated checks, or documented build; `.brackets.json` configures an old editor Sass workflow. | Establish a small, reproducible contributor workflow. |
+| Area               | Evidence                                                                                                                                                                 | Implication                                                                                                   |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| Layout             | `index.html` uses Foundation `.row` / `.columns`; `sass/style.scss` floats card list items at 50%, 25%, and 20% widths.                                                  | Replace framework layout and floats together.                                                                 |
+| Cards              | `.type`, `.parents`, `.frequency`, and `.importance` float; `.name` uses padding and clearing.                                                                           | Centering depends on content and padding rather than available space.                                         |
+| JavaScript         | jQuery 2.0.3, Foundation 5.0.3, Modernizr, and a large inline script.                                                                                                    | Native filtering and dialog APIs can replace the active framework interactions.                               |
+| Highlighting       | Five old Snippet containers and 24 `code.highlight` blocks; highlight.js 9.15.10 and a separate line-number plugin.                                                      | Standardize examples before removing either highlighter.                                                      |
+| Coverage           | 55 cards, 30 existing overlays.                                                                                                                                          | 25 cards have no dedicated overlay/trigger; the existing `h1` overlay already discusses all heading levels.   |
+| HTML               | The `address` overlay is a direct child of the element `<ul>`; the `html` description includes an unescaped `<html>` tag; the `a` definition has a stray closing `span`. | Fix document validity before relying on DOM traversal.                                                        |
+| Sources            | Empty MDN source links exist for `footer`, `main`, and `span`; several older definitions lack individual source links.                                                   | Audit all definitions, not just new entries.                                                                  |
+| Styling categories | Cards carry several color classes, such as `basic-content core text` or `page-section core grouping`.                                                                    | Later CSS rules silently decide the visible category color. Separate visual category from filter memberships. |
+| Credits            | Root `LICENSE` contains GPLv3; footer labels original/modified content CC BY-SA 4.0 and separately cites MDN and HTML5 Doctor.                                           | Document the scope of each license and the provenance of reused material.                                     |
+| Maintenance        | No package manifest, automated checks, or documented build; `.brackets.json` configures an old editor Sass workflow.                                                     | Establish a small, reproducible contributor workflow.                                                         |
 
 The inventory above is based on source inspection. Contrast measurements below are calculations from declared CSS colors, not a completed browser accessibility audit.
 
@@ -42,14 +65,14 @@ Completion check: cards align consistently at narrow and wide widths, long metad
 
 Use the following palette for the five category controls plus All. Core uses a softer pastel green; All uses very light grey with black text; Setup uses dark charcoal grey with white text. Core Text, Core Media, and Page Structure retain their proposed backgrounds based on the original element colors.
 
-| Category/control | Background | Text | Calculated contrast |
-| --- | --- | --- | --- |
-| All | `#F2F3F4` | `#000000` | 18.90:1 |
-| Core | `#D5EDCE` | `#222222` | 12.75:1 |
-| Core Text | `#FAF1BA` | `#222222` | 13.91:1 |
-| Core Media | `#F7AAAA` | `#222222` | 8.55:1 |
-| Page Structure | `#E3CFF6` | `#222222` | 11.00:1 |
-| Setup | `#303740` | `#FFFFFF` | 12.03:1 |
+| Category/control | Background | Text      | Calculated contrast |
+| ---------------- | ---------- | --------- | ------------------- |
+| All              | `#F2F3F4`  | `#000000` | 18.90:1             |
+| Core             | `#D5EDCE`  | `#222222` | 12.75:1             |
+| Core Text        | `#FAF1BA`  | `#222222` | 13.91:1             |
+| Core Media       | `#F7AAAA`  | `#222222` | 8.55:1              |
+| Page Structure   | `#E3CFF6`  | `#222222` | 11.00:1             |
+| Setup            | `#303740`  | `#FFFFFF` | 12.03:1             |
 
 All six text/background combinations exceed AA contrast for normal text. Implement these pairs as CSS custom properties. Preserve the foreground pairing for all card text if these colors are applied to cards; do not inherit the old orange link or importance colors. Multiple filter memberships must not make a card change its visual category. Verify hover, focus, and selected states separately, and indicate the active filter with more than color alone.
 
@@ -74,8 +97,8 @@ Recommend **Prism** for this small static site, using only the grammars examples
 - Normalize examples to escaped `<pre><code class="language-markup">…</code></pre>` content. Recover the original code from the old text-only blocks rather than preserving generated token spans or duplicate copies.
 - Highlight with one implementation; remove Snippet, highlight.js, its line-number plugin, their CSS, and unused theme assets after migration.
 - Provide copy functionality with clear success/failure feedback. Prism has a Copy to Clipboard plugin that depends on Toolbar; verify keyboard and screen-reader behavior if using it.
-- Preserve a plain-text view using a small vanilla JS control if the old “text” option remains useful for teaching. It can switch highlighting without keeping two independent editable copies of the example.
-- Make line numbers optional and exclude them from copied code. Horizontal scrolling belongs inside the code block, with a visible keyboard focus style where scrolling needs focus.
+- Show one highlighted source view. The Plain Text toggle was removed following review; the copy button sits after the example.
+- Include line numbers, hide them from assistive technology, and exclude them from button copying and manual text selection. Horizontal scrolling belongs inside the code block, with a visible keyboard focus style where scrolling needs focus.
 - Audit every syntax token against its actual background. A theme name or popularity is not evidence of AA contrast.
 
 Alternative: Shiki is a good option if we later choose a content build step. Build-time highlighting can ship static highlighted HTML without a browser highlighter, but introduces more tooling than this first update needs.
@@ -112,35 +135,35 @@ Treat the five requested filters as overlapping memberships. **Core** means intr
 
 “All only” below means none of those five filters: retain the more precise visual/category grouping (Forms, Tables, Text, or Embedded). This avoids putting every HTML element into an introductory Core list.
 
-| Element(s) to add | Suggested memberships | Priority and teaching purpose |
-| --- | --- | --- |
-| `picture` | Core Media | First batch: responsive image formats and art direction; retain the fallback `img`. |
-| `source` | Core Media | First batch: supporting sources for `picture`, `video`, and `audio`. |
-| `track` | Core Media | First batch: timed text, especially video captions. |
-| `details`, `summary` | Page Structure | First batch: native disclosure UI; explain the pair together. |
-| `dialog` | Page Structure | First batch: native dialog UI and the mechanism used by this project. |
-| `search` | Page Structure | First batch: semantic region for search/filter controls; distinct from an input type. |
-| `time` | Core Text | First batch: human-readable dates/times with machine-readable `datetime`. |
-| `mark` | Core Text | First batch: contextual relevance/highlighting, distinct from emphasis. |
-| `code` | Core, Core Text | First batch: semantic code text; pair with existing `pre` for blocks. |
-| `hr` | Core, Core Text | First batch: thematic break rather than a purely decorative line. |
-| `abbr`, `q`, `cite`, `small` | Core Text | Next batch: abbreviations, short quotations, titles of works, and side comments. |
-| `sub`, `sup` | Core Text | Next batch: typographic conventions such as subscripts and superscripts. |
-| `iframe` | Core Media | Next batch: embedded documents, with a useful title and contextual security guidance. |
-| `canvas` | All only; Embedded | Next batch: script-drawn graphics and accessible alternatives; more advanced than Core Media. |
-| `fieldset`, `legend` | All only; Forms | First batch: accessible groups of related form controls. |
-| `datalist`, `output`, `optgroup` | All only; Forms | Next batch: suggestions, calculation output, and grouped options; explain limitations. |
-| `progress`, `meter` | All only; Forms | Next batch: distinguish task completion from a scalar measurement. |
-| `caption`, `thead`, `tbody`, `tfoot` | All only; Tables | First batch: complete the current table lessons. |
-| `colgroup`, `col` | All only; Tables | Later: column grouping/styling, after table semantics. |
-| `noscript` | Setup | Next batch: fallback content when scripting is unavailable; explain head/body restrictions. |
-| `template` | Setup | Next batch: inert reusable markup and an introduction to template use. |
-| `slot` | Setup | Later: Web Component composition; requires a shadow DOM explanation. |
-| `hgroup` | Page Structure | Later: current heading-plus-related-paragraph semantics. |
-| `data`, `wbr`, `kbd`, `samp`, `var` | All only; Text | Later: specialized semantics and word-break opportunities. |
-| `ins`, `del`, `s`, `u`, `bdi`, `bdo`, `ruby`, `rt`, `rp` | All only; Text | Later: editorial changes, annotations, directionality, and ruby text. |
-| `base` | Setup | Later: document-wide base URL/target behavior, including its surprising effects. |
-| `embed`, `object`, `map`, `area` | All only; Embedded | Optional reference expansion: embedded resources and image maps, with accessibility context. |
+| Element(s) to add                                        | Suggested memberships | Priority and teaching purpose                                                                 |
+| -------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------- |
+| `picture`                                                | Core Media            | First batch: responsive image formats and art direction; retain the fallback `img`.           |
+| `source`                                                 | Core Media            | First batch: supporting sources for `picture`, `video`, and `audio`.                          |
+| `track`                                                  | Core Media            | First batch: timed text, especially video captions.                                           |
+| `details`, `summary`                                     | Page Structure        | First batch: native disclosure UI; explain the pair together.                                 |
+| `dialog`                                                 | Page Structure        | First batch: native dialog UI and the mechanism used by this project.                         |
+| `search`                                                 | Page Structure        | First batch: semantic region for search/filter controls; distinct from an input type.         |
+| `time`                                                   | Core Text             | First batch: human-readable dates/times with machine-readable `datetime`.                     |
+| `mark`                                                   | Core Text             | First batch: contextual relevance/highlighting, distinct from emphasis.                       |
+| `code`                                                   | Core, Core Text       | First batch: semantic code text; pair with existing `pre` for blocks.                         |
+| `hr`                                                     | Core, Core Text       | First batch: thematic break rather than a purely decorative line.                             |
+| `abbr`, `q`, `cite`, `small`                             | Core Text             | Next batch: abbreviations, short quotations, titles of works, and side comments.              |
+| `sub`, `sup`                                             | Core Text             | Next batch: typographic conventions such as subscripts and superscripts.                      |
+| `iframe`                                                 | Core Media            | Next batch: embedded documents, with a useful title and contextual security guidance.         |
+| `canvas`                                                 | All only; Embedded    | Next batch: script-drawn graphics and accessible alternatives; more advanced than Core Media. |
+| `fieldset`, `legend`                                     | All only; Forms       | First batch: accessible groups of related form controls.                                      |
+| `datalist`, `output`, `optgroup`                         | All only; Forms       | Next batch: suggestions, calculation output, and grouped options; explain limitations.        |
+| `progress`, `meter`                                      | All only; Forms       | Next batch: distinguish task completion from a scalar measurement.                            |
+| `caption`, `thead`, `tbody`, `tfoot`                     | All only; Tables      | First batch: complete the current table lessons.                                              |
+| `colgroup`, `col`                                        | All only; Tables      | Later: column grouping/styling, after table semantics.                                        |
+| `noscript`                                               | Setup                 | Next batch: fallback content when scripting is unavailable; explain head/body restrictions.   |
+| `template`                                               | Setup                 | Next batch: inert reusable markup and an introduction to template use.                        |
+| `slot`                                                   | Setup                 | Later: Web Component composition; requires a shadow DOM explanation.                          |
+| `hgroup`                                                 | Page Structure        | Later: current heading-plus-related-paragraph semantics.                                      |
+| `data`, `wbr`, `kbd`, `samp`, `var`                      | All only; Text        | Later: specialized semantics and word-break opportunities.                                    |
+| `ins`, `del`, `s`, `u`, `bdi`, `bdo`, `ruby`, `rt`, `rp` | All only; Text        | Later: editorial changes, annotations, directionality, and ruby text.                         |
+| `base`                                                   | Setup                 | Later: document-wide base URL/target behavior, including its surprising effects.              |
+| `embed`, `object`, `map`, `area`                         | All only; Embedded    | Optional reference expansion: embedded resources and image maps, with accessibility context.  |
 
 Do not add deprecated elements to the normal teaching table. Review experimental or limited-support additions, such as `selectedcontent`, separately against current MDN compatibility and the intended browser baseline. SVG and MathML may deserve a future cross-reference, but they should not be labeled HTML elements.
 
@@ -165,13 +188,13 @@ Target WCAG 2.2 AA: at least **4.5:1 for normal text**, **3:1 for large text** (
 
 Representative current CSS failures:
 
-| Combination | Declared colors | Calculated ratio |
-| --- | --- | --- |
-| Body/footer links on white | `#cc8400` / `#ffffff` | 3.06:1 |
-| Setup filter text | `#93969b` / `#e3e4e5` | 2.33:1 |
-| Core Text filter text | `#c2a80d` / `#faf1ba` | 2.06:1 |
-| Importance on Forms cards | `#e9965c` / `#64a643` | 1.27:1 |
-| Atom One Light comments | `#a0a1a7` / `#fafafa` | 2.47:1 |
+| Combination                | Declared colors       | Calculated ratio |
+| -------------------------- | --------------------- | ---------------- |
+| Body/footer links on white | `#cc8400` / `#ffffff` | 3.06:1           |
+| Setup filter text          | `#93969b` / `#e3e4e5` | 2.33:1           |
+| Core Text filter text      | `#c2a80d` / `#faf1ba` | 2.06:1           |
+| Importance on Forms cards  | `#e9965c` / `#64a643` | 1.27:1           |
+| Atom One Light comments    | `#a0a1a7` / `#fafafa` | 2.47:1           |
 
 The orange importance text fails 4.5:1 against every declared category background (approximately 1.19–2.04:1). A promising minimal change is a dark foreground such as `#222222`: it calculates at least 5.36:1 against all nine current category backgrounds. Preserve category backgrounds where possible, darken text/links, and use underline/weight/borders to communicate links and state. Recalculate any revised palette rather than assuming these baseline results still apply.
 
@@ -184,7 +207,7 @@ References: [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [text contrast explanatio
 1. **Baseline and content inventory:** record filter membership/counts, overlay targets, source/license provenance, and screenshots at representative sizes. Fix invalid markup; define the browser baseline and code/content license scopes.
 2. **Layout and palette:** introduce Grid, Flexbox cards, explicit visual categories, and contrast-tested CSS tokens; replace Foundation typography/buttons/panels/reset rules used by the page.
 3. **Interactions:** replace filtering and Reveal with vanilla JS and native dialogs; verify keyboard behavior and the no-script content fallback; remove Foundation/jQuery and unused helpers.
-4. **Examples:** normalize old snippets, introduce Prism with an audited theme and copy/plain-text behavior, and remove both old highlighting systems and unused themes.
+4. **Examples:** normalize old snippets, introduce Prism with an audited theme and copy behavior with non-selectable line numbers, and remove both old highlighting systems and unused themes.
 5. **Content completion and additions:** fill existing overlay gaps, correct old lessons, then add the first-batch elements above with approved memberships and per-entry attribution. Complete later batches separately.
 6. **Credits and delivery checks:** finish notices/README, remove obsolete files/editor configuration, add lightweight linting/HTML validation and meaningful browser checks for filtering, dialogs, example copying, coverage, and accessibility.
 
